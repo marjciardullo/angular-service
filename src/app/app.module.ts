@@ -15,8 +15,8 @@ import { LogComponent } from './log/log.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: '/task', component: TaskComponent },
-      { path: '/log', component: LogComponent },
+      { path: 'task', component: TaskComponent },
+      { path: 'log', component: LogComponent },
     ]),
   ],
   declarations: [
