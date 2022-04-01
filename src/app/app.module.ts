@@ -4,10 +4,28 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
+import { HomeComponent } from './home/home.component';
+import { TaskComponent } from './task/task.component';
+import { RouterModule } from '@angular/router';
+import { LogComponent } from './log/log.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent },
+      { path: '/task', component: TaskComponent },
+      { path: '/log', component: LogComponent },
+    ]),
+  ],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    HomeComponent,
+    TaskComponent,
+    LogComponent,
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
